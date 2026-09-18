@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://college-information-bot-1.onrender.com/sitemap.xml
