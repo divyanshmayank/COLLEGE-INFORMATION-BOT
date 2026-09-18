@@ -1,18 +1,26 @@
 import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
+import {
+  getAuth,
+  connectAuthEmulator
+} from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyA5IgayKeOP_e8BVXHKZcmw6tm3VDlBAoQ",
-  authDomain: "college-information-bot-faa4f.firebaseapp.com",
-  projectId: "college-information-bot-faa4f",
-  storageBucket: "college-information-bot-faa4f.firebasestorage.app",
-  messagingSenderId: "1092909777230",
-  appId: "1:1092909777230:web:d67bf27d5419ffdd3e9e1f",
-  measurementId: "G-6XF753DJYH"
+  apiKey: "AIzaSyBsZRGPkW5Efotn8KN5x3Z4bwJViHT51Cg",
+  authDomain: "college-information-bot.firebaseapp.com",
+  projectId: "college-information-bot",
+  storageBucket: "college-information-bot.firebasestorage.app",
+  messagingSenderId: "241115150612",
+  appId: "1:241115150612:web:f1e5aaa2c025a06f4c6a01"
 };
 
 const app = initializeApp(firebaseConfig);
 
 export const auth = getAuth(app);
+
+if (window.location.hostname === "localhost") {
+  connectAuthEmulator(auth, "http://127.0.0.1:9099", {
+    disableWarnings: true
+  });
+}
 
 export default app;
