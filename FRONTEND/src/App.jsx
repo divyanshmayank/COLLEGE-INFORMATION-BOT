@@ -535,7 +535,7 @@ localStorage.setItem(
       <nav className="navbar">
 
         <div className="logo">
-          🎓 College Information Bot
+          🎓  CampusAura AI
         </div>
 
         <div className="nav-links">
@@ -641,7 +641,7 @@ localStorage.setItem(
         <div className="hero-content">
 
           <p className="welcome">
-            WELCOME TO COLLEGE INFORMATION BOT
+            WELCOME TO CampusAura AI
           </p>
 
           <h1>
@@ -1566,7 +1566,7 @@ localStorage.setItem(
       <footer id="about">
 
         <h3>
-          🎓 College Information Bot
+          🎓 CampusAura AI
         </h3>
 
         <p>
@@ -1575,7 +1575,7 @@ localStorage.setItem(
         </p>
 
         <p className="copyright">
-          © 2026 College Information Bot
+          © 2026 CampusAura AI
         </p>
 
       </footer>

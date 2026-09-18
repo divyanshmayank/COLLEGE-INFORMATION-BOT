@@ -407,7 +407,7 @@ function LoginPopup({ onLogin }) {
 
 
         <h2>
-          College Information Bot
+          CampusAura AI
         </h2>
 
 
