@@ -537,24 +537,15 @@ localStorage.setItem(
       <nav className="navbar">
 
         <div className="logo">
-          🎓  CampusAura AI
-        <button
-  style={{
-    display: "block",
-    position: "relative",
-    zIndex: 99999,
-    fontSize: "30px",
-    background: "red",
-    color: "white",
-    border: "2px solid black",
-    padding: "5px 12px",
-    cursor: "pointer"
-  }}
+  🎓 CampusAura AI
+</div>
+
+<button
+  className="mobile-menu-button"
   onClick={() => setShowMobileMenu(!showMobileMenu)}
 >
   ☰
 </button>
-
         <div className="nav-links">
 
           <a href="#home">
