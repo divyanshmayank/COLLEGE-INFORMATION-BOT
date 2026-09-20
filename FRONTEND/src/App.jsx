@@ -25,6 +25,8 @@ function App() {
   const [compareColleges, setCompareColleges] = useState([]);
   const [showComparison, setShowComparison] = useState(false);
   const [showChatHistory, setShowChatHistory] = useState(false);
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
+
   const [chatHistory, setChatHistory] = useState([]);
   // ================= COMPARISON =================
 
@@ -536,7 +538,22 @@ localStorage.setItem(
 
         <div className="logo">
           🎓  CampusAura AI
-        </div>
+        <button
+  style={{
+    display: "block",
+    position: "relative",
+    zIndex: 99999,
+    fontSize: "30px",
+    background: "red",
+    color: "white",
+    border: "2px solid black",
+    padding: "5px 12px",
+    cursor: "pointer"
+  }}
+  onClick={() => setShowMobileMenu(!showMobileMenu)}
+>
+  ☰
+</button>
 
         <div className="nav-links">
 
@@ -628,7 +645,78 @@ localStorage.setItem(
           </div>
 
         </div>
+{showMobileMenu && (
+  <div className="mobile-menu">
 
+    <a
+      href="#home"
+      onClick={() => setShowMobileMenu(false)}
+    >
+      Home
+    </a>
+
+    <a
+      href="#colleges"
+      onClick={() => setShowMobileMenu(false)}
+    >
+      Colleges
+    </a>
+
+    <a
+      href="#about"
+      onClick={() => setShowMobileMenu(false)}
+    >
+      About
+    </a>
+
+    <button
+      onClick={() => {
+        loadChatHistory();
+        setShowChatHistory(!showChatHistory);
+        setShowMobileMenu(false);
+      }}
+    >
+      💬 Chat History
+    </button>
+
+    <button
+      onClick={() => {
+        document
+          .getElementById("ai-assistant")
+          ?.scrollIntoView({
+            behavior: "smooth",
+          });
+
+        setShowMobileMenu(false);
+      }}
+    >
+      🤖 AI Assistant
+    </button>
+
+    <div className="mobile-user">
+      <strong>
+        {user.displayName || "User"}
+      </strong>
+
+      <span>
+        {user.email ||
+          user.phoneNumber ||
+          "Mobile User"}
+      </span>
+    </div>
+
+    <button
+      className="mobile-logout-button"
+      onClick={() => {
+        handleLogout();
+        setShowMobileMenu(false);
+      }}
+    >
+      🚪 Logout
+    </button>
+
+  </div>
+)}
       </nav>
 
       {/* ================= HERO ================= */}

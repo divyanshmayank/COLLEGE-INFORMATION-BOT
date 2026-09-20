@@ -55,6 +55,78 @@ body {
   font-size: 15px;
   cursor: pointer;
 }
+.mobile-menu-button {
+  display: none;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  .mobile-menu-button {
+    display: block;
+    border: none;
+    background: transparent;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 5px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .mobile-menu {
+    position: absolute;
+    top: 72px;
+    left: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 18px;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    z-index: 9999;
+  }
+
+  .mobile-menu a,
+  .mobile-menu button {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 8px;
+    background: #f3f4f6;
+    color: #172033;
+    text-decoration: none;
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .mobile-user {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 10px 5px;
+    border-top: 1px solid #e5e7eb;
+  }
+
+  .mobile-user span {
+    font-size: 13px;
+    color: #6b7280;
+  }
+
+  .mobile-logout-button {
+    background: #fee2e2 !important;
+    color: #b91c1c !important;
+  }
+}
 
 /* ================= HERO ================= */
 
@@ -898,5 +970,98 @@ footer p {
 
   .comparison-table th {
     min-width: 200px;
+  }
+}
+/* MOBILE NAVBAR FIX */
+
+.mobile-menu-button {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  .navbar {
+    position: sticky;
+    top: 0;
+    height: 72px;
+    padding: 0 15px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    box-sizing: border-box;
+  }
+
+  .logo {
+    font-size: 18px !important;
+    white-space: nowrap;
+  }
+
+  .mobile-menu-button {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    margin-left: auto;
+    border: none;
+    background: transparent;
+    color: #172033;
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 10001;
+  }
+
+  .nav-links {
+    display: none !important;
+  }
+
+  .mobile-menu {
+    position: absolute;
+    top: 72px;
+    left: 10px;
+    right: 10px;
+    display: flex !important;
+    flex-direction: column;
+    gap: 10px;
+    padding: 18px;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    z-index: 10000;
+    box-sizing: border-box;
+  }
+
+  .mobile-menu a,
+  .mobile-menu button {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 8px;
+    background: #f3f4f6;
+    color: #172033;
+    text-decoration: none;
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer;
+    box-sizing: border-box;
+  }
+
+  .mobile-user {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 10px 5px;
+    border-top: 1px solid #e5e7eb;
+  }
+
+  .mobile-user span {
+    font-size: 13px;
+    color: #6b7280;
+  }
+
+  .mobile-logout-button {
+    background: #fee2e2 !important;
+    color: #b91c1c !important;
   }
 }
